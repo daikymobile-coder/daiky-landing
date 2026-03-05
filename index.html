@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Daiky — L'IA qui protège votre peau</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -850,8 +850,61 @@ footer .footer-links a:hover { color: var(--purple); }
   .danger-final p { font-size: 0.88rem; }
 
   /* Phone mockup: scale down on mobile */
-  .solution-visual { margin: 0 auto; transform: scale(0.55); transform-origin: top center; margin-bottom: -180px; }
-  .phone-mockup { box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1); }
+  .solution-visual { margin: 0 auto; overflow: hidden; max-width: 180px; max-height: 370px; }
+  .phone-mockup { width: 180px; height: 370px; border-radius: 30px; border-width: 2px; box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1); }
+  .phone-mockup::before { width: 65px; height: 16px; top: 6px; border-radius: 10px; }
+  .phone-screen { border-radius: 28px; top: 2px; left: 2px; right: 2px; bottom: 2px; }
+  .ps-status { height: 26px; padding: 8px 12px 0; }
+  .ps-status-time { font-size: 8px; }
+  .ps-status-icons svg { width: 8px; height: 6px; }
+  .ps-nav { padding: 2px 8px; }
+  .ps-back svg { width: 10px; height: 10px; }
+  .ps-share, .ps-hearts { font-size: 6px; }
+  .ps-share svg, .ps-hearts svg { width: 7px; height: 7px; }
+  .ps-product-img { height: 120px; margin: 0 8px 8px; border-radius: 10px; }
+  .ps-tube-body { width: 45px; height: 75px; border-radius: 5px 5px 7px 7px; }
+  .ps-tube-cap { width: 16px; height: 7px; }
+  .ps-tube-neck { width: 6px; height: 5px; }
+  .ps-tube-label span { font-size: 2.5px !important; }
+  .ps-tube-brand { font-size: 4px !important; }
+  .ps-tube-name { font-size: 2.5px !important; }
+  .ps-tube-detail { font-size: 2px !important; }
+  .ps-tube-bio { width: 10px; height: 10px; font-size: 3px; bottom: 6px; right: 4px; }
+  .ps-tube-vegan { font-size: 2.5px; bottom: 6px; left: 4px; padding: 1px 3px; }
+  .ps-tube-shine { width: 3px; height: 55px; }
+  .ps-info { padding: 0 10px; }
+  .ps-product-name { font-size: 8px !important; }
+  .ps-product-brand { font-size: 6px !important; }
+  .ps-scores { padding: 0 10px; gap: 6px; }
+  .ps-score-badge { padding: 5px 7px; border-radius: 7px; }
+  .ps-score-num { font-size: 7px !important; }
+  .ps-score-label, .ps-score-env-label { font-size: 5px !important; }
+  .ps-score-env-text { font-size: 7px !important; }
+  .ps-score-env-icon { font-size: 7px; }
+  .ps-score-dot { width: 5px !important; height: 5px !important; }
+  .ps-actions { padding: 0 10px; gap: 5px; }
+  .ps-action-pill { padding: 5px; font-size: 6px; border-radius: 7px; }
+  .ps-action-pill svg { width: 7px; height: 7px; }
+  .ps-cta { margin: 0 10px 6px; padding: 6px; font-size: 7px; border-radius: 8px; }
+  .ps-feats { padding: 0 10px; gap: 3px; }
+  .ps-feat { padding: 4px 0; }
+  .ps-feat-icon { width: 16px; height: 16px; border-radius: 5px; font-size: 6px; }
+  .ps-feat-text strong { font-size: 6px; }
+  .ps-feat-text span { font-size: 5px; }
+  .ps-comments { margin: 0 10px; padding: 6px; border-radius: 8px; }
+  .ps-comments-title { font-size: 7px; }
+  .ps-comment-input { padding: 3px 6px; font-size: 5px; border-radius: 5px; }
+  .ps-comment-send { width: 14px; height: 14px; border-radius: 4px; }
+  .ps-comment-send svg { width: 6px; height: 6px; }
+  .ps-comment { padding: 4px 0; }
+  .ps-comment-avatar { width: 14px; height: 14px; font-size: 5px; }
+  .ps-comment-name { font-size: 5.5px; }
+  .ps-comment-badge { font-size: 4px; padding: 1px 3px; }
+  .ps-comment-time { font-size: 4px; }
+  .ps-comment-text { font-size: 5.5px; }
+  .ps-comment-actions { font-size: 4.5px; }
+  .ps-comment-actions svg { width: 6px; height: 6px; }
+  .ps-comments-more { font-size: 5.5px; }
 
   .solution-content { grid-template-columns: 1fr; gap: 24px; }
   .solution-feature { padding: 10px; gap: 10px; }
